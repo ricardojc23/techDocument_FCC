@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,800;1,600&family=Open+Sans&family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
     <title>Technical Document</title>
 </head>
 <body>
@@ -14,133 +15,150 @@
         <img src="./code.png" alt="Logo">
         <h1 class="title">Aprendiendo HTML</h1>
     </Div>
-    <nav id="navbar">
-        <header>Tabla de Contenido</header>
-        <a href="#Introducción_a_HTML" class="nav-link">Introducción a HTML</a>
-        <a href="#Etiquetas_de_HTML" class="nav-link">Etiquetas de HTML</a>
-        <a href="#Encabezados_de_HTML" class="nav-link">Encabezados de HTML</a>
-        <a href="#Listas_de_HTML" class="nav-link">Listas de HTML</a>
-        <a href="#Tablas_de_HTML" class="nav-link">Tablas de HTML</a>
-    </nav>
-    <main id="main-doc">
-        <section class="main-section" id="Introducción_a_HTML">
-            <header>Introducción a HTML</header>
-            <p>
-                HTML (<b>H</b>yper<b>t</b>ext <b>M</b>arkup <b>L</b>anguage) o lenguaje de marcado de hipertexto, utiliza un sistema de marcado compuesto de elementos que representan contenido. El marcado significa que con HTML declaras lo que se presenta a un espectador, no cómo se presenta. Las representaciones visuales se definen mediante hojas de estilo en cascada (CSS) y se muestra a través de los navegadores. 
-            </p>
-            <p>
-                HTML a veces se denomina lenguaje de programación, pero no tiene lógica, por lo que es un <b>lenguaje de marcado</b>. Las etiquetas de HTML proporcionan significado semántico y legibilidad al contenido de la página.
-
-                Un elemento generalmente consta de una etiqueta de apertura (<code>&lt;nombre_elemento></code>), una etiqueta de cierre (<code>&lt;/nombre_elemento></code>), que contienen el nombre del elemento rodeado por corchetes angulares y el contenido entre ellos:
-                <code>
-                    &lt;nombre_elemento> ... contenido ... &lt;/nombre_elemento>
-                </code>
-                Hay algunos elementos HTML que no tienen etiqueta de cierre ni contenido. Estos se denominan elementos vacíos. Algunos de estos elementos vacíos son:
-                <ul>
-                    <li><code>&lt;img></code></li>
-                    <li><code>&lt;meta></code></li>
-                    <li><code>&lt;link></code></li>
-                    <li><code>&lt;input></code></li>
-                    <li><code>&lt;br></code></li>
-                </ul>
-                Los nombres de los elementos se pueden considerar como palabras clave descriptivas del contenido que contienen, como video, audio, tabla, pie de página, etc
-            </p>
-            <p>
-                Una página HTML puede constar potencialmente de cientos de elementos que luego son leídos e interpretados por un navegador web, y luego, se convierte en contenido audible o legible por humanos en la pantalla. Para este documento, es importante tener en cuenta la diferencia entre elementos y etiquetas:
-                <br>
-                <b>Elementos:</b> video, audio, tabla, pie de página
-                <br>
-                <b>Etiquetas:</b> <code>&lt;video></code>, <code>&lt;audio></code>, <code>&lt;table></code>, <code>&lt;footer></code>, <code>&lt;/html></code>, <code>&lt;/body></code>
-            </p>
-        </section>
-        <section class="main-section" id="Etiquetas_de_HTML">
-            <header>Etiquetas de HTML</header>
-            <p>
-                Analicemos una etiqueta ...
-                <br>
-                La etiqueta <code>&lt;p></code> representa un párrafo común.
-                Los elementos suelen tener una etiqueta de apertura y una etiqueta de cierre. La etiqueta de apertura contiene el nombre del elemento en corchetes angulares (<code>&lt;p></code>). La etiqueta de cierre es idéntica a la etiqueta de apertura con la adición de una barra inclinada (/) entre los corchetes de apertura y el nombre del elemento (<code>&lt;/p></code>).
-                <br>
-                El contenido puede ir entonces entre estas dos etiquetas: <code>&lt;p></code> Este es un párrafo simple. <code>&lt;/p></code>.
-            </p>
-        </section>
-        <section class="main-section" id="Encabezados_de_HTML">
-            <header>Encabezados de HTML</header>
+    <div id="content">
+        <nav id="navbar">
+            <header id="navbar-header">Tabla de Contenido</header>
+            <a href="#Introducción_a_HTML" class="nav-link">Introducción a HTML</a>
+            <a href="#Etiquetas_de_HTML" class="nav-link">Etiquetas de HTML</a>
+            <a href="#Encabezados_de_HTML" class="nav-link">Encabezados de HTML</a>
+            <div id="break"></div>
+            <a href="#Listas_de_HTML" class="nav-link">Listas de HTML</a>
+            <a href="#Tablas_de_HTML" class="nav-link">Tablas de HTML</a>
+            <a href="#Referencias" class="nav-link">Referencias</a>
+        </nav>
+        <main id="main-doc">
+            <section class="main-section" id="Introducción_a_HTML">
+                <header>Introducción a HTML</header>
                 <p>
-                    HTML proporciona no solo etiquetas de párrafo simples, sino seis etiquetas de encabezado separadas para indicar encabezados de varios tamaños y espesores. Enumerado como el título 1 al título 6, el título 1 tiene el texto más grande y grueso mientras que el título 6 es el más pequeño y delgado, hasta el nivel de párrafo. Este tema detalla el uso adecuado de estas etiquetas.
+                    HTML (<b>H</b>yper<b>t</b>ext <b>M</b>arkup <b>L</b>anguage) o lenguaje de marcado de hipertexto, utiliza un sistema de marcado compuesto de elementos que representan contenido. El marcado significa que con HTML declaras lo que se presenta a un espectador, no cómo se presenta. Las representaciones visuales se definen mediante hojas de estilo en cascada (CSS) y se muestra a través de los navegadores. 
                 </p>
                 <p>
-                    <b>Uso de títulos</b>
+                    HTML a veces se denomina lenguaje de programación, pero no tiene lógica, por lo que es un <b>lenguaje de marcado</b>. Las etiquetas de HTML proporcionan significado semántico y legibilidad al contenido de la página.
+                </p>
+                <p>
+                    Un elemento generalmente consta de una etiqueta de apertura (<code>&lt;nombre_elemento></code>), una etiqueta de cierre (<code>&lt;/nombre_elemento></code>), que contienen el nombre del elemento rodeado por corchetes angulares y el contenido entre ellos:
+                </p>
+                    <code>
+                        &lt;nombre_elemento> ... contenido ... &lt;/nombre_elemento>
+                    </code>
+                <p>
+                    Hay algunos elementos HTML que no tienen etiqueta de cierre ni contenido. Estos se denominan elementos vacíos. Algunos de estos elementos vacíos son:
+                </p>
+                    <ul>
+                        <li><code>&lt;img></code></li>
+                        <li><code>&lt;meta></code></li>
+                        <li><code>&lt;link></code></li>
+                        <li><code>&lt;input></code></li>
+                        <li><code>&lt;br></code></li>
+                    </ul>
+                <p>
+                    Los nombres de los elementos se pueden considerar como palabras clave descriptivas del contenido que contienen, como video, audio, tabla, pie de página, etc
+                </p>
+                <p>
+                    Una página HTML puede constar potencialmente de cientos de elementos que luego son leídos e interpretados por un navegador web, y luego, se convierte en contenido audible o legible por humanos en la pantalla. Para este documento, es importante tener en cuenta la diferencia entre elementos y etiquetas:
+                    <br> <br>
+                    <b>Elementos:</b> video, audio, tabla, pie de página
                     <br>
-                    Los encabezados se pueden utilizar para describir el tema que preceden y se definen con las etiquetas <code>&lt;h1></code> a <code>&lt;h6></code>. Por ejemplo:
+                    <b>Etiquetas:</b> <code>&lt;video></code>, <code>&lt;audio></code>, <code>&lt;table></code>, <code>&lt;footer></code>, <code>&lt;/html></code>, <code>&lt;/body></code>
                 </p>
-                <code class="code-block">
-                    &lt;h1> Título 1 &lt;/h1> <br>
-                    &lt;h2> Título 2 &lt;/h2> <br>
-                    &lt;h3> Título 3 &lt;/h3> <br>
-                    &lt;h4> Título 4 &lt;/h4> <br>
-                    &lt;h5> Título 5 &lt;/h5> <br>
-                    &lt;h6> Título 6 &lt;/h6> <br>
-                </code>
-        </section>
-        <section class="main-section" id="Listas_de_HTML">
-            <header>Listas de HTML</header>
-            <p>
-                HTML ofrece tres formas de especificar listas: listas ordenadas, listas desordenadas y listas de descripción. El uso de listas ordenadas es para secuencias ordinales para indicar el orden de los elementos de la lista, las listas desordenadas usan un símbolo definido, como una viñeta para enumerar elementos sin un orden designado, y las listas de descripción usan sangrías para enumerar elementos con sus hijos. Este tema explica la implementación y combinación de estas listas en el marcado HTML.
-            </p>
-            <p>
-                <b>Lista ordenada</b>
-                <br>
-                Se puede crear una lista ordenada con la etiqueta <code>&lt;ol></code> y cada elemento de la lista se puede crear con la etiqueta <code>&lt;li></code> como en el ejemplo a continuación:
-                <br>
-                <code class="code-block">
-                    &lt;ol> <br>
+            </section>
+            <section class="main-section" id="Etiquetas_de_HTML">
+                <header>Etiquetas de HTML</header>
+                <p>
+                    Analicemos una etiqueta ...
+                    <br> <br>
+                    La etiqueta <code>&lt;p></code> representa un párrafo común.
+                    Los elementos suelen tener una etiqueta de apertura y una etiqueta de cierre. La etiqueta de apertura contiene el nombre del elemento en corchetes angulares (<code>&lt;p></code>). La etiqueta de cierre es idéntica a la etiqueta de apertura con la adición de una barra inclinada (/) entre los corchetes de apertura y el nombre del elemento (<code>&lt;/p></code>).
+                    <br>
+                    El contenido puede ir entonces entre estas dos etiquetas: <code>&lt;p></code> Este es un párrafo simple. <code>&lt;/p></code>.
+                </p>
+            </section>
+            <section class="main-section" id="Encabezados_de_HTML">
+                <header>Encabezados de HTML</header>
+                    <p>
+                        HTML proporciona no solo etiquetas de párrafo simples, sino seis etiquetas de encabezado separadas para indicar encabezados de varios tamaños y espesores. Enumerado como el título 1 al título 6, el título 1 tiene el texto más grande y grueso mientras que el título 6 es el más pequeño y delgado, hasta el nivel de párrafo. Este tema detalla el uso adecuado de estas etiquetas.
+                    </p>
+                    <p>
+                        <b>Uso de títulos</b>
+                        <br>
+                        Los encabezados se pueden utilizar para describir el tema que preceden y se definen con las etiquetas <code>&lt;h1></code> a <code>&lt;h6></code>. Por ejemplo:
+                    </p>
+                    <code class="code-block">
+                        &lt;h1> Título 1 &lt;/h1> <br>
+                        &lt;h2> Título 2 &lt;/h2> <br>
+                        &lt;h3> Título 3 &lt;/h3> <br>
+                        &lt;h4> Título 4 &lt;/h4> <br>
+                        &lt;h5> Título 5 &lt;/h5> <br>
+                        &lt;h6> Título 6 &lt;/h6> <br>
+                    </code>
+            </section>
+            <section class="main-section" id="Listas_de_HTML">
+                <header>Listas de HTML</header>
+                <p>
+                    HTML ofrece tres formas de especificar listas: listas ordenadas, listas desordenadas y listas de descripción. El uso de listas ordenadas es para secuencias ordinales para indicar el orden de los elementos de la lista, las listas desordenadas usan un símbolo definido, como una viñeta para enumerar elementos sin un orden designado, y las listas de descripción usan sangrías para enumerar elementos con sus hijos. Este tema explica la implementación y combinación de estas listas en el marcado HTML.
+                </p>
+                <p>
+                    <b>Lista ordenada</b>
+                    <br>
+                    Se puede crear una lista ordenada con la etiqueta <code>&lt;ol></code> y cada elemento de la lista se puede crear con la etiqueta <code>&lt;li></code> como en el ejemplo a continuación:
+                    <br>
+                    <code class="code-block">
+                        &lt;ol> <br>
+                            &lt;li> Elemento &lt;/li> <br>
+                            &lt;li> Otro artículo &lt;/li> <br>
+                            &lt;li> Otro artículo más &lt;/li> <br>
+                        &lt;/ol> <br>
+                    </code>
+                </p>
+                <p>
+                    <b>Lista desordenada</b>
+                    <br>
+                    Se puede crear una lista desordenada con la etiqueta <code>&lt;ul></code> y cada elemento de la lista se puede crear con la etiqueta <code>&lt;li</code> como se muestra en el siguiente ejemplo:
+                    <br>
+                    <code class="code-block">
+                        &lt;ul> <br>
                         &lt;li> Elemento &lt;/li> <br>
                         &lt;li> Otro artículo &lt;/li> <br>
                         &lt;li> Otro artículo más &lt;/li> <br>
-                    &lt;/ol> <br>
-                </code>
-            </p>
-            <p>
-                <b>Lista desordenada</b>
-                <br>
-                Se puede crear una lista desordenada con la etiqueta <code>&lt;ul></code> y cada elemento de la lista se puede crear con la etiqueta <code>&lt;li</code> como se muestra en el siguiente ejemplo:
-                <br>
-                <code class="code-block">
-                    &lt;ul> <br>
-                    &lt;li> Elemento &lt;/li> <br>
-                    &lt;li> Otro artículo &lt;/li> <br>
-                    &lt;li> Otro artículo más &lt;/li> <br>
-                    &lt;/ul> <br>
-                </code>
-        </section>
-        <section class="main-section" id="Tablas_de_HTML">
-            <header>Tablas de HTML</header>
-            <p>
-                El elemento HTML <code>&lt;table></code> permite a los autores web mostrar datos tabulares (como texto, imágenes, enlaces, otras tablas, etc.) en una tabla bidimensional con filas y columnas de celdas. Por ejemplo, la siguiente tabla simple:
-                <br>
-                <code class="code-block">
-                    &lt;tabla> <br>
-                    &lt;tr> <br>
-                    &lt;th> Encabezado 1 / Columna 1 &lt;/th> <br>
-                    &lt;th> Encabezado 2 / Columna 2 &lt;/th> <br>
-                    &lt;/tr> <br>
-                    &lt;tr> <br>
-                    &lt;td> Fila 1 Columna de datos 1 &lt;/td> <br>
-                    &lt;td> Columna 2 de datos de la fila 1 &lt;/td> <br>
-                    &lt;/tr> <br>
-                    &lt;tr> <br>
-                    &lt;td> Columna de datos 1 de la fila 2 &lt;/td> <br>
-                    &lt;td> Columna 2 de datos de la fila 2 &lt;/td> <br>
-                    &lt;/tr> <br>
-                    &lt;/table> <br>
-                </code>
-            </p>
-            <p>
-                Esto generará una tabla que consta de tres filas en total (<code>&lt;tr</code>): una fila de celdas de encabezado (<code>&lt;th</code>) y dos filas de celdas de contenido (<code>&lt;td</code>). Los elementos <code>&lt;th</code> son encabezados tabulares y los elementos <code>&lt;td</code> son datos tabulares. Puedes poner lo que sea desea dentro de un <code>&lt;td</code> o <code>&lt;th</code>.
-            </p>
-        </section>
-    </main>
+                        &lt;/ul> <br>
+                    </code>
+            </section>
+            <section class="main-section" id="Tablas_de_HTML">
+                <header>Tablas de HTML</header>
+                <p>
+                    El elemento HTML <code>&lt;table></code> permite a los autores web mostrar datos tabulares (como texto, imágenes, enlaces, otras tablas, etc.) en una tabla bidimensional con filas y columnas de celdas. Por ejemplo, la siguiente tabla simple:
+                    <br>
+                    <code class="code-block">
+                        &lt;tabla> <br>
+                        &lt;tr> <br>
+                        &lt;th> Encabezado 1 / Columna 1 &lt;/th> <br>
+                        &lt;th> Encabezado 2 / Columna 2 &lt;/th> <br>
+                        &lt;/tr> <br>
+                        &lt;tr> <br>
+                        &lt;td> Fila 1 Columna de datos 1 &lt;/td> <br>
+                        &lt;td> Columna 2 de datos de la fila 1 &lt;/td> <br>
+                        &lt;/tr> <br>
+                        &lt;tr> <br>
+                        &lt;td> Columna de datos 1 de la fila 2 &lt;/td> <br>
+                        &lt;td> Columna 2 de datos de la fila 2 &lt;/td> <br>
+                        &lt;/tr> <br>
+                        &lt;/table> <br>
+                    </code>
+                </p>
+                <p>
+                    Esto generará una tabla que consta de tres filas en total (<code>&lt;tr></code>): una fila de celdas de encabezado (<code>&lt;th></code>) y dos filas de celdas de contenido (<code>&lt;td></code>). Los elementos <code>&lt;th></code> son encabezados tabulares y los elementos <code>&lt;td></code> son datos tabulares. Puedes poner lo que sea desea dentro de un <code>&lt;td></code> o <code>&lt;th></code>.
+                </p>
+            </section>
+            <section class="main-section" id="Referencias">
+                <header>Referencias</header>
+                <ul>
+                    <li>Toda la documentación ha sido tomada del libro <a href="https://books.goalkicker.com/HTML5Book/" target="_blank">HTML5 Notes for Professionals</a></li>
+                    <li>El ícono ha sido proporcionado por <a href="https://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> desde <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></li>
+                </ul>
+            </section>
+        </main>
+    </div>
+    
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 </html>

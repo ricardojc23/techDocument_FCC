@@ -1,3 +1,117 @@
 /* font-family: 'Montserrat', sans-serif;
 font-family: 'Open Sans', sans-serif;
 font-family: 'Source Code Pro', monospace; */
+html {
+    font-size: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+body {
+    margin: 0 auto;
+    max-width: 1500px;
+}
+#main-header {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    border-bottom: 0.5px solid rgb(182, 182, 182);
+}
+img {
+    width: 40px;
+    height: auto;
+    margin-left: 20px;
+}
+h1 {
+    display: inline-block;
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 1.8rem;
+    color: rgb(22, 21, 21);
+}
+#content {
+    display: flex;
+    flex-direction: row;
+}
+#navbar {
+    height: 100%;
+    padding: 18px 15px 15px 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+}
+#navbar-header, .nav-link {
+    display: inline-block;
+    white-space: nowrap;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: rgb(22, 21, 21);
+}
+#navbar-header {
+    font-size: 1.2rem;
+}
+.nav-link {
+    padding-left: 18px;
+}
+.nav-link:hover {
+    text-decoration: solid;
+    text-decoration-line: underline;
+    text-underline-offset: 2px;
+    text-decoration-color: rgb(22, 21, 21);
+}
+header {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+#main-doc {
+    border-left: 0.5px solid rgb(182, 182, 182);
+}
+.main-section {
+    margin: 15px;
+}
+p, li, a {
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+}
+code {
+    background-color: rgb(219, 219, 219);
+}
+.code-block {
+    display: inline-block;
+    margin: 20px 15px 20px;
+    padding: 15px 30px;
+    background-color: rgb(219, 219, 219);
+}
+
+@media only screen and (max-width: 800px) {
+    body {
+        min-width: 450px;
+    }
+    #content {
+        display: flex;
+        flex-direction: column;
+    }
+    #navbar {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        border-bottom: 0.5px solid rgb(182, 182, 182);
+    }
+    #navbar-header {
+        display: none;
+    }
+    #break {
+        flex-basis: 100%;
+        width: 0;
+    }
+    .nav-link {
+        padding-left: 0px;
+        flex-basis: 33.3%;
+        text-align: center;
+        font-size: 0.78rem;
+    }
+}
